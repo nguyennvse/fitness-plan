@@ -9,8 +9,10 @@
             <a class="grow" [routerLink]="item.url" routerLinkActive="active">{{item.name}}</a>
         }
     </div>
-    <div class="nav-social flex gap-3 w-1/5">
-        <mat-icon class="size-6" fontIcon="search"></mat-icon>
+    <div class="nav-social flex gap-3 w-1/5 ">
+       <mat-icon class="size-6 hover:text-orange-500 cursor-pointer" fontIcon="search"></mat-icon>
+       <a routerLink="/shopping_cart"><mat-icon class="size-6 hover:text-orange-500 cursor-pointer" fontIcon="shopping_cart"></mat-icon></a>
+        <mat-icon class="size-6 hover:text-orange-500 cursor-pointer" fontIcon="person" (click)="goToLogin()"></mat-icon>
     </div>
 
 </div>

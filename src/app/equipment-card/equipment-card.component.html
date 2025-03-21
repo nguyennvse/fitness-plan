@@ -1,0 +1,14 @@
+<div class="p-5 gap-10 border border-gray-500 rounded-md">
+    <div class="h-[100px] w-[200px]"><img [src]="imageUrl()" /></div>
+    <div>
+      <p>Name: {{ name() }}</p>
+      <p>description: {{ description() }}</p>
+      <p>Price: {{ price() }}</p>
+    </div>
+  <div class="text-center w-full">
+    <button (click)="addToCart()" class="w-[100px] h-12 text-orange-500 rounded-lg">
+        Add to cart
+      </button>
+  </div>
+  
+</div>

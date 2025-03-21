@@ -1,0 +1,12 @@
+    <img [src]="imageSrc()" height="247" class="w-full">
+    <div class="flex py-5 px-3 bg-black">
+        <div class="w-3/5  class-card">
+            <p class="text-orange-500 text-xs">{{title()}}</p>
+            <p class="text-white text-xl font-bold">{{description()}}</p>
+        </div>
+        <div class="w-2/5 flex justify-end items-center">
+            <div class="bg-[#232323] h-12 w-12">
+                <ng-content></ng-content>
+            </div>
+        </div>
+    </div>

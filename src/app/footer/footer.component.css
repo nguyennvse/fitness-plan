@@ -1,0 +1,11 @@
+.mid-icon{
+    height: 70px;
+    width: 70px;
+    font-size: 50px;
+    border-radius: 50%;
+    background-color: #F36100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white
+}

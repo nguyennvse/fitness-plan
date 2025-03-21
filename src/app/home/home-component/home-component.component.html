@@ -1,0 +1,94 @@
+<div class="home-container">
+
+    <div class="bg w-screen h-screen bg-[url('https://themewagon.github.io/gymlife/img/hero/hero-1.jpg')] relative">
+       
+        <div class="absolute right-10 top-1/3 flex justify-center items-center text-white">
+            <div>
+                <p class="text-3xl mb-1">Shape your body</p>
+                <p class="text-8xl">Be <b class="text-orange-500">Strong</b><br>Training Hard</p>
+            </div>
+        </div>
+    
+    </div>
+    <div class="flex justify-center items-center bg-black h-96">
+        <div>
+            <p class="text-xl text-center text-orange-500">Why Choose us</p>
+            <p class="text-4xl text-white text-center font-bold">Push your limits forward</p>
+            <div class="flex justify-center items-center mt-8 text-orange-600 gap-3 pl-6 pr-6">
+                <div class="w-1/5">
+                    <div> <mat-icon class="mid-icon m-auto" fontIcon="fitness_center"></mat-icon></div>
+                    
+                    <p class="text-center mt-8 mb-2 text-xl">Modern equipment</p>
+                    <p class="text-xs text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore facilisis.</p>
+                </div>
+                <div class="w-1/5">
+                    <div> <mat-icon class="mid-icon m-auto" fontIcon="fitness_center"></mat-icon></div>
+                    
+                    <p class="text-center mt-8 mb-2 text-xl">Healthy nutrition plan</p>
+                    <p class="text-xs text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore facilisis.</p>
+                </div>
+                <div class="w-1/5">
+                    <div> <span class="material-symbols-outlined mid-icon m-auto">nutrition </span></div>
+                    <p class="text-center mt-8 mb-2 text-xl ">Proffesponal training plana</p>
+                    <p class="text-xs text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore facilisis.</p>
+                </div>
+                <div class="w-1/5">
+                    <div > <mat-icon class="mid-icon m-auto" fontIcon="monitor_heart"></mat-icon></div>
+                    <p class="text-center mt-8 mb-2 text-xl ">Unique to your needs</p>
+                    <p class="text-xs text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut dolore facilisis.</p>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+    <div class="flex justify-center items-center flex-wrap w-3/5 m-auto mt-6">
+        <p class="text-xl text-center text-orange-500 w-full">Our Classes</p>
+        <p class="text-4xl text-white text-center font-bold w-full">WHAT WE CAN OFFER</p>
+        <div class="flex w-full gap-4 px-2 pt-8">
+           @for (item of classCard; track $index) {
+            <div class="w-1/3">
+                <app-class-card [imageSrc]="item.image" [title]="item.title" [description]="item.description">
+                    <mat-icon class="class-icon" fontIcon="chevron_right"></mat-icon>
+                </app-class-card>
+            </div>
+           }
+        </div>
+        <div class="flex w-full gap-4 px-2 pt-8">
+            @for (item of classCard2; track $index) {
+             <div class="w-1/2">
+                 <app-class-card [imageSrc]="item.image" [title]="item.title" [description]="item.description">
+                     <mat-icon class="class-icon" fontIcon="chevron_right"></mat-icon>
+                 </app-class-card>
+             </div>
+            }
+         </div>
+    </div>
+    <div class="w-screen h-[500px] flex flex-wrap items-center justify-center mt-10 bg-[url('https://themewagon.github.io/gymlife/img/banner-bg.jpg')] p-5">
+        <div class="flex flex-wrap">
+            <p class="text-white font-bold text-4xl w-full text-center uppercase">registration now to get more deals</p>
+            <p class="text-gray-500 font-bold text-2xl w-full text-center">Where health, beauty and fitness meet.</p>
+            <button class="text-orange-500 bg-transparent border-orange-500 border h-12 w-40 m-auto mt-6">APPOINTMENT</button>
+        </div>
+    </div>
+
+    <div class="flex justify-center items-center bg-black plan-container flex-wrap p-12">
+        <p class="w-full text-center text-orange-500 text-2xl">Our plan</p>
+        <p class="w-full text-center text-white mb-9 text-4xl font-bold">Choose your pricing plan</p>
+        <div class="w-full flex items-center justify-center gap-5">
+            @for (plan of plans; track $index) {
+                <div class="w-1/5 hover:bg-white border-gray-500 border plan-card">
+                    <p class="text-white w-full text-center mt-6 text-3xl">{{plan.title}}</p>
+                    <p class="text-orange-500 w-full text-center text-7xl mt-5">$ {{plan.price}}</p>
+                    <p class="w-full text-center text-gray-300 mb-5">single class</p>
+                    @for (class of plan.classes; track $index) {
+                        <p class="text-gray-500 text-center mt-3">{{class}}</p>
+                    }
+                    <button class="text-white text-xl w-4/5 bg-[#333333] block mx-auto h-9 my-10">ENROLL NOW</button>
+                </div>
+            }
+        </div>
+        
+    </div>
+</div>
+<app-footer></app-footer>

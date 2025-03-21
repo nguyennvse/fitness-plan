@@ -1,0 +1,71 @@
+<div class="w-full cart-container pt-5">
+  <div class="w-3/5 m-auto p-5 bg-white">
+    <div class="flex">
+      <div class="w-3/5 border p-7 flex justify-between flex-wrap">
+        <div
+          class="border-b w-full border-b-gray-500 flex justify-between pb-6"
+        >
+          <p class="text-5xl">Shopping Cart</p>
+          <p class="text-5xl">{{store.itemCount()}}</p>
+        </div>
+
+        <div class="w-full">
+          @for(cart of store.listItem(); track $index){
+          <div
+            class="w-full  {{
+              !$last ? 'border-b-gray-500 border-b' : ''
+            }} flex flex-1 gap-5 justify-between p-5 items-center"
+          >
+            <img width="100" height="100" [src]="cart.imageUrl" />
+            <p class="w-1/5">{{ cart.name }}</p>
+            <div class="w-1/5">
+              <span
+                (click)="store.updateQuantity($index,false)"
+                class="cursor-pointer"
+                >-</span
+              >
+              <input
+                class="w-10 mx-1 border border-blue-600 rounded text-center"
+                type="number"
+                [value]="cart.quantity"
+              />
+              <span
+                (click)="store.updateQuantity($index,true)"
+                class="cursor-pointer"
+                >+</span
+              >
+            </div>
+            <p class="w-1/5">{{ cart.quantity * cart.price }}</p>
+            <div>
+              <mat-icon
+                class="size-6 hover:text-orange-500 cursor-pointer"
+                fontIcon="delete"
+              ></mat-icon>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="w-2/5 border py-7 px-10 text-center">
+        <div class="border-b w-full border-b-gray-500 flex justify-center pb-6">
+          <p class="text-5xl">Summary</p>
+        </div>
+        <div class="flex justify-between p-5">
+            <p class="text-3xl">ITEMS @if (totalItem() > 0) {<span>{{totalItem()}}</span>}</p>
+            <p class="text-3xl">{{store.totalPrice()}}</p>
+        </div>
+        <div class="border-b border-b-gray-500 p-5">
+            <p>SHIPPING</p>
+            <input class="p-1 border focus:border-blue-500 mt-5 w-full" value="Standard">
+            <p class="mt-5">Code</p>
+            <input class="p-1 border  mt-5 w-full" type="text"/>
+        </div>
+        <div class="flex justify-between pt-5">
+            <p class="text-3xl">TOTAL PRICE</p>
+            <p class="text-3xl">{{store.totalPrice()}}</p>
+        </div>
+        <button class="w-36 h-10 bg-white rounded-md mt-10 text-orange-500 border border-orange-500">Register</button>
+      </div>
+    </div>
+  </div>
+</div>

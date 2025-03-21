@@ -1,0 +1,12 @@
+<div class="w-1/2 m-auto">
+    @for (food of foods; track $index) {
+        <!-- <div>
+            <p>{{food.name}}</p>
+            <p>Calories: {{food.calories}}</p>
+            <p>Carb: {{food.carb}}</p>
+            <p>Fat: {{food.fat}}</p>
+            <p>Protein: {{food.protein}}</p>
+        </div> -->
+        <app-food-card [name]="food.name" [calories]="food.calories" [carb]="food.carb" [fat]="food.fat" [protein]="food.protein"></app-food-card>
+    }
+</div>

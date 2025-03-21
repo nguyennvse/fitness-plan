@@ -1,0 +1,4 @@
+.cart-container{
+    min-height: calc(100vh - 73px);
+    background-color: #151515;
+}

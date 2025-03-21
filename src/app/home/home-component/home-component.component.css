@@ -1,0 +1,99 @@
+.nav-bar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-logo{
+    width: 30%;
+}
+
+.nav-menu{
+    width: 60%;
+    display: flex;
+}
+
+.nav-menu a{
+    flex-basis: auto;
+    flex-grow: 1;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nav-menu a:hover{
+    color: orange;
+}
+.nav-social{
+    width: 30%;
+}
+
+:host .mid-icon{
+    height: 70px;
+    width: 70px;
+    font-size: 50px;
+    border-radius: 50%;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:host .mid-icon:hover{
+    background-color: orange;
+    color: white
+}
+
+.home-container{
+    background-color: #151515;
+}
+
+.class-icon{
+    height: 50px;
+    width: 50px;
+    font-size: 50px;
+    color:white
+}
+
+.class-card:after {
+    position: absolute;
+    left: -5px;
+    top: -44px;
+    height: 100px;
+    width: 600px;
+    border-top: 4px solid #464646;
+    background: #0a0a0a;
+    content: "";
+    -webkit-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    z-index: -1;
+}
+
+.plan-card:hover p:first-child{
+    color: black
+}
+
+.plan-card div:first-child:hover button{
+    background-color: #F36100;
+} 
+
+.plan-card{
+    -webkit-transform: skewY(-5deg);
+    -ms-transform: skewY(-5deg);
+    transform: skewY(-5deg);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.plan-card p, .plan-card button{
+    -webkit-transform: skewY(5deg);
+    -ms-transform: skewY(5deg);
+    transform: skewY(5deg);
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+

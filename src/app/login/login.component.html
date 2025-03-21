@@ -1,0 +1,31 @@
+<div class="w-screen">
+   
+    <div [formGroup]="loginForm" class="w-fit mx-auto border border-gray-300 mt-40 px-10 rounded-md">
+        <p class="m-auto w-fit text-4xl font-bold my-12">Login</p>
+        <div>
+            <mat-form-field class="w-80">
+                <mat-label>Email</mat-label>
+                <mat-icon matPrefix fontIcon="person" ></mat-icon>
+                <input formControlName="id" matInput value="">
+              
+              </mat-form-field>
+              @if (loginForm.controls.id.invalid) {
+                <p class="text-red-500 text-sm">Email is incorrect</p>
+               }
+        </div>
+       <div>
+        <mat-form-field class="w-80">
+            <mat-label>Password</mat-label>
+            <mat-icon matPrefix fontIcon="lock" ></mat-icon>
+            <input formControlName="password" matInput type="password" value="">
+          </mat-form-field>
+       </div>
+       <p class="text-right text-sm">Forgor your password?</p>
+       <p class="text-right text-sm">Sign up</p>
+       <div class="w-full text-center my-12 ">
+        <button mat-fab extended style="width:200px;background-color: -webkit-linear-gradient(right, #21d4fd, #b721ff, #21d4fd, #b721ff)" class=" " (click)="signIn()"> <mat-icon fontIcon="login"></mat-icon> Sign in </button>
+       </div>
+       
+    </div>
+
+</div>
