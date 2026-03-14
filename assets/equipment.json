@@ -1,0 +1,409 @@
+[
+  {
+    "id": 1,
+    "name": "Tạ đơn (Dumbbell)",
+    "price": 450000,
+    "description": "Tạ tay cơ bản cho nhiều bài tập.",
+    "image_url": "https://ptfitness.vn/wp-content/uploads/2021/10/ta-tay-luc-giac-joinder-jd1190-p0.jpg",
+    "category": "strength",
+    "muscle_group": ["arms", "shoulders", "chest"],
+    "level": "beginner"
+  },
+  {
+    "id": 2,
+    "name": "Tạ đòn (Barbell)",
+    "price": 1200000,
+    "description": "Tạ đòn cho squat, deadlift, bench press.",
+    "image_url": "https://24hsport.vn/webroot/img/images/Don-ta-1m2-phi-50-nhap-khau-a.jpg",
+    "category": "strength",
+    "muscle_group": ["legs", "back", "chest"],
+    "level": "intermediate"
+  },
+  {
+    "id": 3,
+    "name": "Bánh tạ 2.5kg",
+    "price": 90000,
+    "description": "Đĩa tạ nhỏ cho tăng tải.",
+    "image_url": "https://ptfitness.vn/wp-content/uploads/2021/12/ta-dia-mau-rogue-competition-2-5kg-logo.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "beginner"
+  },
+  {
+    "id": 4,
+    "name": "Bánh tạ 5kg",
+    "price": 150000,
+    "description": "Đĩa tạ phổ biến.",
+    "image_url": "https://down-vn.img.susercontent.com/file/6c5264700df43da992e18848a251f9c7",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "beginner"
+  },
+  {
+    "id": 5,
+    "name": "Bánh tạ 10kg",
+    "price": 280000,
+    "description": "Đĩa tạ nặng trung bình.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnMrB2YAS_KqGLiPEsbhzhOXqoiYiPE3ijkg&s",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "intermediate"
+  },
+
+  {
+    "id": 6,
+    "name": "Ghế tập tạ phẳng",
+    "price": 1600000,
+    "description": "Ghế bench cơ bản.",
+    "image_url": "https://product.hstatic.net/1000288768/product/dlf_1041_b259800bd5214f77a4f743c32095e6e5_master.jpg",
+    "category": "strength",
+    "muscle_group": ["chest"],
+    "level": "beginner"
+  },
+  {
+    "id": 7,
+    "name": "Ghế tập tạ đa năng",
+    "price": 2800000,
+    "description": "Ghế điều chỉnh nhiều góc.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWgLjZpxF8YKGl1JIw_5W-owvBnEB68YdDOg&s",
+    "category": "strength",
+    "muscle_group": ["chest", "shoulders"],
+    "level": "intermediate"
+  },
+  {
+    "id": 8,
+    "name": "Xà đơn treo tường",
+    "price": 650000,
+    "description": "Dụng cụ tập lưng và tay.",
+    "image_url": "https://www.thethaodaiviet.vn/images/202011/goods_img/xa-don-gan-cua-treo-tuong-2015-kich-thuoc--g9191604426732038.jpg",
+    "category": "strength",
+    "muscle_group": ["back", "arms"],
+    "level": "beginner"
+  },
+  {
+    "id": 9,
+    "name": "Xà kép",
+    "price": 1100000,
+    "description": "Tập tay sau và ngực.",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMa2CD8Hr3xJpPiMRa_7z5Lvx5O0l7hdv7zw&s",
+    "category": "strength",
+    "muscle_group": ["arms", "chest"],
+    "level": "intermediate"
+  },
+  {
+    "id": 10,
+    "name": "Power Rack",
+    "price": 22000000,
+    "description": "Khung tập tạ đa năng.",
+    "image_url": "https://beast.com.vn/wp-content/uploads/2024/10/1Artboard-87@3x-20.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "advanced"
+  },
+
+  {
+    "id": 11,
+    "name": "Squat Rack",
+    "price": 15000000,
+    "description": "Khung squat an toàn.",
+    "image_url": "https://ptfitness.vn/wp-content/uploads/2022/12/khung-ganh-ta-rack-squat-2-chan-joinder-jd8820-mau-xanh.jpg",
+    "category": "strength",
+    "muscle_group": ["legs"],
+    "level": "intermediate"
+  },
+  {
+    "id": 12,
+    "name": "Smith Machine",
+    "price": 35000000,
+    "description": "Máy tập tạ có ray dẫn.",
+    "image_url": "https://example.com/smith.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "advanced"
+  },
+  {
+    "id": 13,
+    "name": "Trap Bar",
+    "price": 3500000,
+    "description": "Thanh tạ deadlift an toàn.",
+    "image_url": "https://example.com/trap-bar.jpg",
+    "category": "strength",
+    "muscle_group": ["legs", "back"],
+    "level": "intermediate"
+  },
+  {
+    "id": 14,
+    "name": "Kettlebell 8kg",
+    "price": 450000,
+    "description": "Tạ chuông nhẹ.",
+    "image_url": "https://example.com/kb-8.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "beginner"
+  },
+  {
+    "id": 15,
+    "name": "Kettlebell 16kg",
+    "price": 750000,
+    "description": "Tạ chuông nặng.",
+    "image_url": "https://example.com/kb-16.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "intermediate"
+  },
+
+  {
+    "id": 16,
+    "name": "Máy ép ngực",
+    "price": 28000000,
+    "description": "Máy tập ngực an toàn.",
+    "image_url": "https://example.com/chest-press.jpg",
+    "category": "strength",
+    "muscle_group": ["chest"],
+    "level": "beginner"
+  },
+  {
+    "id": 17,
+    "name": "Máy kéo xô",
+    "price": 26000000,
+    "description": "Máy tập lưng xô.",
+    "image_url": "https://example.com/lat.jpg",
+    "category": "strength",
+    "muscle_group": ["back"],
+    "level": "beginner"
+  },
+  {
+    "id": 18,
+    "name": "Máy kéo cáp đôi",
+    "price": 32000000,
+    "description": "Máy tập đa nhóm cơ.",
+    "image_url": "https://example.com/cable.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "intermediate"
+  },
+  {
+    "id": 19,
+    "name": "Máy leg press",
+    "price": 30000000,
+    "description": "Máy tập đùi.",
+    "image_url": "https://example.com/leg-press.jpg",
+    "category": "strength",
+    "muscle_group": ["legs"],
+    "level": "beginner"
+  },
+  {
+    "id": 20,
+    "name": "Máy leg curl",
+    "price": 27000000,
+    "description": "Máy tập đùi sau.",
+    "image_url": "https://example.com/leg-curl.jpg",
+    "category": "strength",
+    "muscle_group": ["legs"],
+    "level": "beginner"
+  },
+
+  {
+    "id": 21,
+    "name": "Máy hack squat",
+    "price": 38000000,
+    "description": "Squat máy cường độ cao.",
+    "image_url": "https://example.com/hack-squat.jpg",
+    "category": "strength",
+    "muscle_group": ["legs"],
+    "level": "advanced"
+  },
+  {
+    "id": 22,
+    "name": "Máy calf raise",
+    "price": 21000000,
+    "description": "Tập bắp chân.",
+    "image_url": "https://example.com/calf.jpg",
+    "category": "strength",
+    "muscle_group": ["calves"],
+    "level": "beginner"
+  },
+  {
+    "id": 23,
+    "name": "Máy vai",
+    "price": 26000000,
+    "description": "Máy shoulder press.",
+    "image_url": "https://example.com/shoulder.jpg",
+    "category": "strength",
+    "muscle_group": ["shoulders"],
+    "level": "beginner"
+  },
+  {
+    "id": 24,
+    "name": "Máy tay trước",
+    "price": 19000000,
+    "description": "Máy biceps curl.",
+    "image_url": "https://example.com/biceps.jpg",
+    "category": "strength",
+    "muscle_group": ["arms"],
+    "level": "beginner"
+  },
+  {
+    "id": 25,
+    "name": "Máy tay sau",
+    "price": 20000000,
+    "description": "Máy triceps extension.",
+    "image_url": "https://example.com/triceps.jpg",
+    "category": "strength",
+    "muscle_group": ["arms"],
+    "level": "beginner"
+  },
+
+  {
+    "id": 26,
+    "name": "Con lăn tập bụng",
+    "price": 250000,
+    "description": "Dụng cụ tập core.",
+    "image_url": "https://example.com/ab.jpg",
+    "category": "accessory",
+    "muscle_group": ["core"],
+    "level": "beginner"
+  },
+  {
+    "id": 27,
+    "name": "Ghế Roman",
+    "price": 1800000,
+    "description": "Tập lưng dưới và bụng.",
+    "image_url": "https://example.com/roman.jpg",
+    "category": "strength",
+    "muscle_group": ["core", "back"],
+    "level": "intermediate"
+  },
+  {
+    "id": 28,
+    "name": "Bóng gym",
+    "price": 380000,
+    "description": "Tập core và phục hồi.",
+    "image_url": "https://example.com/ball.jpg",
+    "category": "accessory",
+    "muscle_group": ["core"],
+    "level": "beginner"
+  },
+  {
+    "id": 29,
+    "name": "Bóng slam ball",
+    "price": 520000,
+    "description": "Tập sức mạnh nổ.",
+    "image_url": "https://example.com/slam.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "intermediate"
+  },
+  {
+    "id": 30,
+    "name": "Sandbag",
+    "price": 650000,
+    "description": "Túi cát tập functional.",
+    "image_url": "https://example.com/sandbag.jpg",
+    "category": "strength",
+    "muscle_group": ["fullbody"],
+    "level": "intermediate"
+  },
+
+  {
+    "id": 31,
+    "name": "Battle Rope",
+    "price": 1800000,
+    "description": "Dây thừng tập cardio sức mạnh.",
+    "image_url": "https://example.com/rope.jpg",
+    "category": "cardio",
+    "muscle_group": ["arms", "core"],
+    "level": "intermediate"
+  },
+  {
+    "id": 32,
+    "name": "Sled kéo",
+    "price": 4200000,
+    "description": "Dụng cụ kéo đẩy chân.",
+    "image_url": "https://example.com/sled.jpg",
+    "category": "strength",
+    "muscle_group": ["legs"],
+    "level": "advanced"
+  },
+  {
+    "id": 33,
+    "name": "Dây nhảy",
+    "price": 120000,
+    "description": "Cardio đơn giản.",
+    "image_url": "https://example.com/jump.jpg",
+    "category": "cardio",
+    "muscle_group": ["legs"],
+    "level": "beginner"
+  },
+  {
+    "id": 34,
+    "name": "Máy chạy bộ",
+    "price": 18000000,
+    "description": "Cardio tim mạch.",
+    "image_url": "https://example.com/treadmill.jpg",
+    "category": "cardio",
+    "muscle_group": ["legs"],
+    "level": "beginner"
+  },
+  {
+    "id": 35,
+    "name": "Xe đạp tập",
+    "price": 9500000,
+    "description": "Cardio ít áp lực khớp.",
+    "image_url": "https://example.com/bike.jpg",
+    "category": "cardio",
+    "muscle_group": ["legs"],
+    "level": "beginner"
+  },
+
+  {
+    "id": 36,
+    "name": "Máy chèo thuyền",
+    "price": 14500000,
+    "description": "Cardio toàn thân.",
+    "image_url": "https://example.com/row.jpg",
+    "category": "cardio",
+    "muscle_group": ["fullbody"],
+    "level": "intermediate"
+  },
+  {
+    "id": 37,
+    "name": "Máy leo cầu thang",
+    "price": 42000000,
+    "description": "Cardio cường độ cao.",
+    "image_url": "https://example.com/stair.jpg",
+    "category": "cardio",
+    "muscle_group": ["legs"],
+    "level": "advanced"
+  },
+  {
+    "id": 38,
+    "name": "Elliptical",
+    "price": 22000000,
+    "description": "Cardio mượt.",
+    "image_url": "https://example.com/elliptical.jpg",
+    "category": "cardio",
+    "muscle_group": ["legs"],
+    "level": "beginner"
+  },
+  {
+    "id": 39,
+    "name": "Foam Roller",
+    "price": 350000,
+    "description": "Giãn cơ phục hồi.",
+    "image_url": "https://example.com/foam.jpg",
+    "category": "accessory",
+    "muscle_group": ["recovery"],
+    "level": "beginner"
+  },
+  {
+    "id": 40,
+    "name": "Thảm yoga",
+    "price": 300000,
+    "description": "Thảm tập chống trượt.",
+    "image_url": "https://example.com/mat.jpg",
+    "category": "accessory",
+    "muscle_group": ["core"],
+    "level": "beginner"
+  }
+]
