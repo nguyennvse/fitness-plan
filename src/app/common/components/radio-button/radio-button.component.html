@@ -1,0 +1,8 @@
+<p for="radio-group" class="mb-1">{{ formConfig().title }}</p>
+<mat-radio-group aria-label="Select an option" (change)="radioChange($event)">
+  @for (option of optionList(); track $index) {
+    <mat-radio-button class="ml-1" [value]="option.value">{{
+      option.label
+    }}</mat-radio-button>
+  }
+</mat-radio-group>

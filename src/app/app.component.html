@@ -1,19 +1,44 @@
-
-
-<div class="nav-bar text-white h-15 p-4 bg-black flex w-full items-center justify-center">
-    <div class="nav-logo w-1/5">
-        <img src="https://themewagon.github.io/gymlife/img/logo.png">
-    </div>
-    <div class="nav-menu w-4/5 flex items-center justify-center text-xl flex-1 gap-9">
-        @for (item of navigationMenus; track $index) {
-            <a class="grow" [routerLink]="item.url" routerLinkActive="active">{{item.name}}</a>
+<div
+  class="nav-bar text-white h-15 p-4 bg-black flex w-full items-center justify-center"
+>
+  <div class="nav-logo w-1/5 cursor-pointer" (click)="logoClick()">
+    <img src="https://themewagon.github.io/gymlife/img/logo.png" />
+  </div>
+  <div
+    class="nav-menu w-4/5 flex items-center justify-center text-xl flex-1 gap-9"
+  >
+    @for (item of navigationMenus; track $index) {
+      <a class="grow" [routerLink]="item.url" routerLinkActive="active">{{
+        item.name
+      }}</a>
+    }
+  </div>
+  <div class="nav-social flex gap-3 w-1/5 justify-center">
+    <mat-icon
+      class="size-6 hover:text-orange-500 cursor-pointer"
+      fontIcon="search"
+    ></mat-icon>
+    <a routerLink="/shopping_cart">
+      <div class="relative">
+        @if (store.itemCount() > 0) {
+          <div
+            class="rounded-full h-5 w-5 text-white absolute bg-orange-500 bottom-4 text-center left-3"
+          >
+            {{ store.itemCount() }}
+          </div>
         }
-    </div>
-    <div class="nav-social flex gap-3 w-1/5 ">
-       <mat-icon class="size-6 hover:text-orange-500 cursor-pointer" fontIcon="search"></mat-icon>
-       <a routerLink="/shopping_cart"><mat-icon class="size-6 hover:text-orange-500 cursor-pointer" fontIcon="shopping_cart"></mat-icon></a>
-        <mat-icon class="size-6 hover:text-orange-500 cursor-pointer" fontIcon="person" (click)="goToLogin()"></mat-icon>
-    </div>
 
+        <mat-icon
+          class="size-6 hover:text-orange-500 cursor-pointer"
+          fontIcon="shopping_cart"
+        ></mat-icon>
+      </div>
+    </a>
+    <mat-icon
+      class="size-6 hover:text-orange-500 cursor-pointer"
+      fontIcon="person"
+      (click)="goToLogin()"
+    ></mat-icon>
+  </div>
 </div>
 <router-outlet />

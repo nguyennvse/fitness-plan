@@ -1,0 +1,36 @@
+<div class="w-full m-auto flex flex-wrap">
+  <div class="w-1/5 border-r border-r-gray-200 p-4">
+    @for (item of filters; track $index) {
+      <h3 class="border-b border-b-gray-300 p-2">{{ item.title }}</h3>
+      @if (item.listCheckbox) {
+        @for (option of item.listCheckbox; track $index) {
+          <p class="p-4">
+            <input name="Breakfast" type="checkbox" class="mr-2" />{{ option }}
+          </p>
+        }
+      } @else {
+        <div class="w-full">
+          <app-slider></app-slider>
+        </div>
+      }
+    }
+  </div>
+  <div class="w-4/5 flex flex-wrap">
+    <div
+      class="p-2 w-full h-24 border-b-gray-200 border-b flex justify-left items-center relative"
+    >
+      <input
+        name="search"
+        class="w-3/5 border-gray-400 rounded-full border h-8"
+        type="text"
+      />
+      <mat-icon
+        class="size-6 hover:text-orange-500 cursor-pointer absolute left-5"
+        fontIcon="search"
+      ></mat-icon>
+    </div>
+    @for (food of foods(); track $index) {
+      <app-food-card [foodInfo]="food"></app-food-card>
+    }
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="w-full">
+  <p>{{ formConfig().title }}</p>
+  @for (value of valueList(); track $index) {
+    <mat-checkbox class="ml-1" (change)="checkboxChange($event, value)">
+      {{ value }}
+    </mat-checkbox>
+  }
+</div>

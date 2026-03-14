@@ -1,0 +1,217 @@
+<mat-vertical-stepper [linear]="false" #stepper [animationDuration]="'1000'">
+  <mat-step [stepControl]="generalFormGroup">
+    <form [formGroup]="generalFormGroup">
+      <ng-template matStepLabel>
+        <p
+          [class.text-green-500]="
+            isAllControlDirty(generalFormGroup) && generalFormGroup.valid
+          "
+          [class.text-red-500]="
+            isAllControlDirty(generalFormGroup) && !generalFormGroup.valid
+          "
+          class="leading-7"
+        >
+          General information @if(isAllControlDirty(generalFormGroup)) {
+          @if(generalFormGroup.valid){
+          <mat-icon
+            class="size-6 text-green-500 icon-complete"
+            fontIcon="check"
+          ></mat-icon>
+          } @else {
+          <mat-icon
+            class="size-6 text-red-500 icon-complete"
+            fontIcon="close"
+          ></mat-icon>
+          } }
+        </p>
+      </ng-template>
+      <div class="w-full flex gap-2 flex-wrap p-2" id="general">
+        @for (item of generalFormConfig; track $index) { @switch (item.type) {
+        @case('text') {
+        <div [class]="item.class">
+          <mat-form-field>
+            <input
+              matInput
+              [placeholder]="item.title"
+              [formControlName]="item.control"
+              required="true"
+              (change)="inputChange()"
+            />
+          </mat-form-field>
+        </div>
+        } @case('date-picker') {
+        <div [class]="item.class">
+          <mat-form-field>
+            <mat-label>{{ item.title }}</mat-label>
+            <input
+              [formControlName]="item.control"
+              matInput
+              [matDatepicker]="picker"
+            />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        } } }
+      </div>
+      <div>
+        <button
+          class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+          matButton="outlined"
+          matStepperNext
+        >
+          Next
+          <mat-icon
+            class="size-6 text-white icon-btn"
+            fontIcon="chevron_right"
+          ></mat-icon>
+        </button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="paymentFormGroup">
+    <ng-template matStepLabel>
+      <p
+        [class.text-green-500]="
+          isAllControlDirty(paymentFormGroup) && paymentFormGroup.valid
+        "
+        [class.text-red-500]="
+          isAllControlDirty(paymentFormGroup) && !paymentFormGroup.valid
+        "
+        class="leading-7"
+      >
+        Payment information @if(isAllControlDirty(paymentFormGroup)) {
+        @if(paymentFormGroup.valid){
+        <mat-icon
+          class="size-6 text-green-500 icon-complete"
+          fontIcon="check"
+        ></mat-icon>
+        } @else {
+        <mat-icon
+          class="size-6 text-red-500 icon-complete"
+          fontIcon="close"
+        ></mat-icon>
+        } }
+      </p>
+    </ng-template>
+    <app-form-generator
+      [formConfig]="paymentFormConfig"
+      [inputformGroup]="paymentFormGroup"
+    ></app-form-generator>
+    <div>
+      <button
+        class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+        matButton="outlined"
+        matStepperPrevious
+      >
+        <mat-icon
+          class="size-6 text-white icon-btn"
+          fontIcon="chevron_left"
+        ></mat-icon>
+        Back
+      </button>
+      <button
+        class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+        matButton="outlined"
+        matStepperNext
+      >
+        Next
+        <mat-icon
+          class="size-6 text-white icon-btn"
+          fontIcon="chevron_right"
+        ></mat-icon>
+      </button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>
+      <p
+        [class.text-green-500]="
+          isAllControlDirty(healthFormGroup) && healthFormGroup.valid
+        "
+        [class.text-red-500]="
+          isAllControlDirty(healthFormGroup) && !healthFormGroup.valid
+        "
+        class="leading-7"
+      >
+        <span>Health</span> @if(isAllControlDirty(healthFormGroup)) {
+        @if(healthFormGroup.valid){
+        <mat-icon
+          class="size-6 text-green-500 icon-complete"
+          fontIcon="check"
+        ></mat-icon>
+        } @else {
+        <mat-icon
+          class="size-6 text-red-500 icon-complete"
+          fontIcon="close"
+        ></mat-icon>
+        } }
+      </p>
+    </ng-template>
+    <app-form-generator
+      [formConfig]="healthFormConfig"
+      [inputformGroup]="healthFormGroup"
+    ></app-form-generator>
+    <div>
+      <button
+        class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+        matButton="outlined"
+        matStepperPrevious
+      >
+        <mat-icon
+          class="size-6 text-white icon-btn"
+          fontIcon="chevron_left"
+        ></mat-icon>
+        Back
+      </button>
+      <button
+        class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+        matButton="outlined"
+        matStepperNext
+      >
+        Next
+        <mat-icon
+          class="size-6 text-white icon-btn"
+          fontIcon="chevron_right"
+        ></mat-icon>
+      </button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Target</ng-template>
+    <app-form-generator
+      [formConfig]="targetFormConfig"
+      [inputformGroup]="targetFormGroup"
+    ></app-form-generator>
+    <div>
+      <button
+        class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+        matButton="outlined"
+        matStepperPrevious
+      >
+        <mat-icon
+          class="size-6 text-white icon-btn"
+          fontIcon="chevron_left"
+        ></mat-icon>
+        Back
+      </button>
+      <button
+        class="border border-white rounded-full w-24 h-10 bg-green-500 text-white"
+        matButton="outlined"
+        matStepperNext
+      >
+        Next
+        <mat-icon
+          class="size-6 text-white icon-btn"
+          fontIcon="chevron_right"
+        ></mat-icon>
+      </button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+<div class="w-full">
+  <button mat-button="outlined" (click)="register()">Register</button>
+</div>

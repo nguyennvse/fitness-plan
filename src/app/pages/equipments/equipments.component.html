@@ -1,0 +1,18 @@
+<div class="w-full flex flex-nowrap">
+  <div class="w-1/5 border-r border-r-gray-300">
+    <p>aaa</p>
+  </div>
+  <div class="w-4/5 flex gap-4 p-4 flex-wrap">
+    <div class="h-12 w-full border-b border-b-gray-300"></div>
+    @for(e of equipments(); track $index){
+    <div class="w-1/3">
+      <app-equipment-card
+        [name]="e.name"
+        [price]="e.price"
+        [imageUrl]="e.image_url"
+        [description]="e.description"
+      ></app-equipment-card>
+    </div>
+    }
+  </div>
+</div>

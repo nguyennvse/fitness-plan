@@ -1,0 +1,59 @@
+<form [formGroup]="inputformGroup()">
+  <div class="w-full flex gap-2 flex-wrap p-2">
+    @for (item of formConfig(); track $index) {
+      @switch (item.type) {
+        @case ("text") {
+          <div [class]="item.class">
+            <mat-form-field>
+              <input
+                matInput
+                [placeholder]="item.title"
+                [formControlName]="item.control"
+                required="false"
+              />
+            </mat-form-field>
+          </div>
+        }
+        @case ("date-picker") {
+          <div [class]="item.class">
+            <mat-form-field>
+              <mat-label>{{ item.title }}</mat-label>
+              <input
+                matInput
+                [formControlName]="item.control"
+                [matDatepicker]="picker"
+              />
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        }
+        @case ("chips") {
+          <app-chips
+            [defaultValue]="''"
+            [formConfig]="item"
+            [chipList]="item.chipList || []"
+            [formControlName]="item.control"
+          ></app-chips>
+        }
+        @case ("radio-button") {
+          <app-radio-button
+            [formConfig]="item"
+            [optionList]="item.optionList || []"
+            [formControlName]="item.control"
+          ></app-radio-button>
+        }
+        @case ("checkbox") {
+          <app-checkbox
+            [formConfig]="item"
+            [valueList]="item.checkboxOptions || []"
+            [formControlName]="item.control"
+          ></app-checkbox>
+        }
+      }
+    }
+  </div>
+</form>
