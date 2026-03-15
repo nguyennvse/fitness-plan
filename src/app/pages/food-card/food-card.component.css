@@ -1,3 +1,8 @@
 :host {
-    width: 33%;
+  width: 33%;
+}
+
+.card-img {
+  height: 240px;
+  width: 430px;
 }

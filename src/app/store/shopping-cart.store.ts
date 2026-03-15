@@ -28,11 +28,6 @@ type ShoppingCartState = {
 };
 
 const initialShoppingCartState: ShoppingCartState = {
-  // listItem: [
-  //   { name: 'day khang luc', quantity: 1, price: 100, imageUrl: './ao.webp' },
-  //   { name: 'ta don', quantity: 1, price: 200, imageUrl: './ao.webp' },
-  //   { name: 'ao', quantity: 1, price: 300, imageUrl: './ao.webp' },
-  // ],
   listItem: [],
   isLoading: false,
   filter: { query: '', order: 'asc' },

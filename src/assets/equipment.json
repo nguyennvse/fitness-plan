@@ -14,7 +14,7 @@
     "name": "Tạ đòn (Barbell)",
     "price": 1200000,
     "description": "Tạ đòn cho squat, deadlift, bench press.",
-    "image_url": "https://example.com/barbell.jpg",
+    "image_url": "https://24hsport.vn/webroot/img/images/Don-ta-1m2-phi-50-nhap-khau-a.jpg",
     "category": "strength",
     "muscle_group": ["legs", "back", "chest"],
     "level": "intermediate"
@@ -24,7 +24,7 @@
     "name": "Bánh tạ 2.5kg",
     "price": 90000,
     "description": "Đĩa tạ nhỏ cho tăng tải.",
-    "image_url": "https://example.com/plate-2-5.jpg",
+    "image_url": "https://ptfitness.vn/wp-content/uploads/2021/12/ta-dia-mau-rogue-competition-2-5kg-logo.jpg",
     "category": "strength",
     "muscle_group": ["fullbody"],
     "level": "beginner"
@@ -34,7 +34,7 @@
     "name": "Bánh tạ 5kg",
     "price": 150000,
     "description": "Đĩa tạ phổ biến.",
-    "image_url": "https://example.com/plate-5.jpg",
+    "image_url": "https://down-vn.img.susercontent.com/file/6c5264700df43da992e18848a251f9c7",
     "category": "strength",
     "muscle_group": ["fullbody"],
     "level": "beginner"
@@ -44,7 +44,7 @@
     "name": "Bánh tạ 10kg",
     "price": 280000,
     "description": "Đĩa tạ nặng trung bình.",
-    "image_url": "https://example.com/plate-10.jpg",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnMrB2YAS_KqGLiPEsbhzhOXqoiYiPE3ijkg&s",
     "category": "strength",
     "muscle_group": ["fullbody"],
     "level": "intermediate"
@@ -55,7 +55,7 @@
     "name": "Ghế tập tạ phẳng",
     "price": 1600000,
     "description": "Ghế bench cơ bản.",
-    "image_url": "https://example.com/bench-flat.jpg",
+    "image_url": "https://product.hstatic.net/1000288768/product/dlf_1041_b259800bd5214f77a4f743c32095e6e5_master.jpg",
     "category": "strength",
     "muscle_group": ["chest"],
     "level": "beginner"
@@ -65,7 +65,7 @@
     "name": "Ghế tập tạ đa năng",
     "price": 2800000,
     "description": "Ghế điều chỉnh nhiều góc.",
-    "image_url": "https://example.com/bench-adjust.jpg",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWgLjZpxF8YKGl1JIw_5W-owvBnEB68YdDOg&s",
     "category": "strength",
     "muscle_group": ["chest", "shoulders"],
     "level": "intermediate"
@@ -75,7 +75,7 @@
     "name": "Xà đơn treo tường",
     "price": 650000,
     "description": "Dụng cụ tập lưng và tay.",
-    "image_url": "https://example.com/pullup.jpg",
+    "image_url": "https://www.thethaodaiviet.vn/images/202011/goods_img/xa-don-gan-cua-treo-tuong-2015-kich-thuoc--g9191604426732038.jpg",
     "category": "strength",
     "muscle_group": ["back", "arms"],
     "level": "beginner"
@@ -85,7 +85,7 @@
     "name": "Xà kép",
     "price": 1100000,
     "description": "Tập tay sau và ngực.",
-    "image_url": "https://example.com/dip.jpg",
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMa2CD8Hr3xJpPiMRa_7z5Lvx5O0l7hdv7zw&s",
     "category": "strength",
     "muscle_group": ["arms", "chest"],
     "level": "intermediate"
@@ -95,7 +95,7 @@
     "name": "Power Rack",
     "price": 22000000,
     "description": "Khung tập tạ đa năng.",
-    "image_url": "https://example.com/power-rack.jpg",
+    "image_url": "https://beast.com.vn/wp-content/uploads/2024/10/1Artboard-87@3x-20.jpg",
     "category": "strength",
     "muscle_group": ["fullbody"],
     "level": "advanced"
@@ -106,7 +106,7 @@
     "name": "Squat Rack",
     "price": 15000000,
     "description": "Khung squat an toàn.",
-    "image_url": "https://example.com/squat-rack.jpg",
+    "image_url": "https://ptfitness.vn/wp-content/uploads/2022/12/khung-ganh-ta-rack-squat-2-chan-joinder-jd8820-mau-xanh.jpg",
     "category": "strength",
     "muscle_group": ["legs"],
     "level": "intermediate"

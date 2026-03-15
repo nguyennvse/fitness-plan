@@ -1,3 +1,10 @@
-<mat-slider>
-  <input (onchange)="onSliderChange($event)" matSliderThumb />
+<mat-slider
+  [max]="formConfig().sliderRange?.max ?? 1000"
+  [min]="formConfig().sliderRange?.min ?? 0"
+>
+  <input (change)="onSliderChange($event)" matSliderThumb />
 </mat-slider>
+<div class="w-full flex justify-between">
+  <p>{{ formConfig().sliderRange?.min }}</p>
+  <p>{{ formConfig().sliderRange?.max }}</p>
+</div>

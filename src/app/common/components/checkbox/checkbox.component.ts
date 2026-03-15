@@ -1,4 +1,4 @@
-import { Component, forwardRef, input } from '@angular/core';
+import { Component, forwardRef, input, output } from '@angular/core';
 import { ControlValueAccessor, Form, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormConfigType } from '../../../model/FormConfig.model';

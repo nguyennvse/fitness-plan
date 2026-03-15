@@ -3,13 +3,19 @@ export type FormConfigType = {
   control: string;
   type: string;
   class: string;
-  index: number;
+  // index: number;
   chipList?: string[];
   optionList?: RadioOptionType[];
   checkboxOptions?: string[];
+  sliderRange?: SliderRange;
 };
 
 type RadioOptionType = {
   label: string;
   value: any;
+};
+
+type SliderRange = {
+  min: number;
+  max: number;
 };
