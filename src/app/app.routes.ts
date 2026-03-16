@@ -56,5 +56,12 @@ export const routes: Routes = [
         (m) => m.EmailVerifyComponent,
       ),
   },
+  {
+    path: 'personal_info',
+    loadComponent: () =>
+      import('./pages/email-verify/email-verify.component').then(
+        (m) => m.EmailVerifyComponent,
+      ),
+  },
   { path: '**', component: HomePageComponent },
 ];

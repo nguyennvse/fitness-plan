@@ -8,7 +8,6 @@
             [formConfig]="item"
             [valueList]="item.checkboxOptions || []"
             [formControlName]="item.control"
-            (onchange)="onSliderChange($event)"
           ></app-checkbox>
         } @else {
           <h3 class="border-b border-b-gray-300 p-2">{{ item.title }}</h3>

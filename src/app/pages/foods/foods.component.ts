@@ -13,16 +13,7 @@ import {
 } from '@angular/forms';
 import { FormConfigType } from '../../model/FormConfig.model';
 import { CheckboxComponent } from '../../common/components/checkbox/checkbox.component';
-import {
-  debounce,
-  debounceTime,
-  distinct,
-  distinctUntilChanged,
-  of,
-  Subject,
-  switchMap,
-  takeUntil,
-} from 'rxjs';
+import { debounceTime, distinctUntilChanged, Subject, takeUntil } from 'rxjs';
 import { InfiniteScrollDirective } from '../../common/directive/infinite-scroll.directive';
 @Component({
   selector: 'app-foods',
@@ -182,14 +173,11 @@ export class FoodsComponent {
           this.foods.set(this.originalFood);
         }
       });
-
-    window.addEventListener('scroll', () => {});
   }
 
   ngOnDestroy(): void {
     this.unsubscribeSubject.next();
     this.unsubscribeSubject.complete();
-    window.removeEventListener('scroll', () => {});
   }
 
   onSliderChange(event: Event) {
@@ -209,7 +197,6 @@ export class FoodsComponent {
     this.isLoadingMore = true;
 
     setTimeout(() => {
-      console.log('LOADDDDDDDDD');
       const cloneFood = [...this.originalFood];
       const moreFood = cloneFood.slice(
         this.pageCount * 9,
