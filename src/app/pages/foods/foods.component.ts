@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { FoodCardComponent } from '../food-card/food-card.component';
 import { FoodApiService } from '../../core/services/food/Food.service';
 import { FoodDtoModel, FoodViewModel } from '../../model/Food.model';
@@ -9,10 +9,21 @@ import {
   FormGroup,
   ɵInternalFormsSharedModule,
   ReactiveFormsModule,
+  FormControl,
 } from '@angular/forms';
 import { FormConfigType } from '../../model/FormConfig.model';
 import { CheckboxComponent } from '../../common/components/checkbox/checkbox.component';
-import { Subject, takeUntil } from 'rxjs';
+import {
+  debounce,
+  debounceTime,
+  distinct,
+  distinctUntilChanged,
+  of,
+  Subject,
+  switchMap,
+  takeUntil,
+} from 'rxjs';
+import { InfiniteScrollDirective } from '../../common/directive/infinite-scroll.directive';
 @Component({
   selector: 'app-foods',
   imports: [
@@ -22,10 +33,12 @@ import { Subject, takeUntil } from 'rxjs';
     CheckboxComponent,
     ɵInternalFormsSharedModule,
     ReactiveFormsModule,
+    InfiniteScrollDirective,
   ],
   templateUrl: './foods.component.html',
   styleUrl: './foods.component.css',
   providers: [FoodApiService],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FoodsComponent {
   constructor(
@@ -37,7 +50,11 @@ export class FoodsComponent {
   foods = signal<FoodViewModel[]>([]);
   filters!: FormConfigType[];
   unsubscribeSubject = new Subject<void>();
-  pageCount: number = 0;
+  pageCount: number = 1;
+  scrollThreshHold = window.innerHeight;
+  searchControl: FormControl = new FormControl('');
+  isShowLoadingScroll = signal(false);
+  isLoadingMore = false;
   ngOnInit(): void {
     this.foodFilterGroup = this.fb.group({
       type: [''],
@@ -98,6 +115,7 @@ export class FoodsComponent {
           );
           this.foods.set(filterList);
         } else {
+          this.pageCount = 0;
           this.foods.set(this.originalFood);
         }
       });
@@ -113,6 +131,7 @@ export class FoodsComponent {
           );
           this.foods.set(filterList);
         } else {
+          this.pageCount = 0;
           this.foods.set(this.originalFood);
         }
       });
@@ -126,6 +145,7 @@ export class FoodsComponent {
           const filterFood = cloneFood.filter((food) => food.calories > value);
           this.foods.set(filterFood);
         } else {
+          this.pageCount = 0;
           this.foods.set(this.originalFood);
         }
       });
@@ -139,9 +159,37 @@ export class FoodsComponent {
           const filterFood = cloneFood.filter((food) => food.protein > value);
           this.foods.set(filterFood);
         } else {
+          this.pageCount = 0;
           this.foods.set(this.originalFood);
         }
       });
+
+    this.searchControl.valueChanges
+      .pipe(
+        takeUntil(this.unsubscribeSubject),
+        distinctUntilChanged(),
+        debounceTime(200),
+      )
+      .subscribe((value: any) => {
+        if (value) {
+          const cloneFood = [...this.originalFood];
+          const filterList = cloneFood.filter((food) =>
+            food.name.toLowerCase().includes(value.toLowerCase()),
+          );
+          this.foods.set(filterList);
+        } else {
+          this.pageCount = 0;
+          this.foods.set(this.originalFood);
+        }
+      });
+
+    window.addEventListener('scroll', () => {});
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribeSubject.next();
+    this.unsubscribeSubject.complete();
+    window.removeEventListener('scroll', () => {});
   }
 
   onSliderChange(event: Event) {
@@ -151,5 +199,28 @@ export class FoodsComponent {
 
   applyFilters() {
     console.log(this.foodFilterGroup.value);
+  }
+
+  onSrollToBottom() {
+    if (this.isLoadingMore || this.pageCount * 9 > this.originalFood.length)
+      return;
+
+    this.isShowLoadingScroll.set(true);
+    this.isLoadingMore = true;
+
+    setTimeout(() => {
+      console.log('LOADDDDDDDDD');
+      const cloneFood = [...this.originalFood];
+      const moreFood = cloneFood.slice(
+        this.pageCount * 9,
+        (this.pageCount + 1) * 9,
+      );
+      this.pageCount++;
+      this.foods.set([...this.foods(), ...moreFood]);
+
+      this.isLoadingMore = false;
+
+      this.isShowLoadingScroll.set(false);
+    }, 1000);
   }
 }

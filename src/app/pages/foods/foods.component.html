@@ -28,16 +28,28 @@
     >
       <input
         name="search"
-        class="w-3/5 border-gray-400 rounded-full border h-8"
+        class="w-3/5 border-gray-400 rounded-full border h-8 pl-11"
         type="text"
+        [formControl]="searchControl"
       />
       <mat-icon
         class="size-6 hover:text-orange-500 cursor-pointer absolute left-5"
         fontIcon="search"
       ></mat-icon>
     </div>
-    @for (food of foods(); track $index) {
-      <app-food-card [foodInfo]="food"></app-food-card>
-    }
+    <div
+      class="h-full max-h-full food-container flex flex-wrap"
+      appInfiniteScroll
+      (srollToBottom)="onSrollToBottom()"
+    >
+      @for (food of foods(); track food.id) {
+        <app-food-card [foodInfo]="food"></app-food-card>
+      }
+      @if (this.isShowLoadingScroll()) {
+        <p class="w-full text-xl text-black text-center h-16">
+          Loading more ...
+        </p>
+      }
+    </div>
   </div>
 </div>

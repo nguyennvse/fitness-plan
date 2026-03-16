@@ -14,7 +14,7 @@
   background: #d1d5db;
   border-radius: 999px;
   cursor: pointer;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .slider::before {
@@ -26,7 +26,7 @@
   top: 3px;
   background: #fff;
   border-radius: 50%;
-  transition: .2s;
+  transition: 0.2s;
 }
 
 .toggle input:checked + .slider {
@@ -35,4 +35,9 @@
 
 .toggle input:checked + .slider::before {
   transform: translateX(20px);
+}
+
+.food-container {
+  max-height: calc(100vh - 170px);
+  overflow-y: auto;
 }

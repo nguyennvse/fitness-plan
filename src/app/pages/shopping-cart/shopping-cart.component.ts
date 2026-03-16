@@ -1,4 +1,11 @@
-import { Component, computed, inject, Signal, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  computed,
+  inject,
+  Signal,
+  signal,
+} from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { ShoppingCartState } from '../../store/shopping-cart.store';
 
@@ -7,6 +14,7 @@ import { ShoppingCartState } from '../../store/shopping-cart.store';
   imports: [MatIconModule],
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ShoppingCartComponent {
   readonly store = inject(ShoppingCartState);
