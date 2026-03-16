@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     { name: 'Classes', url: '/classes' },
     { name: 'Equipments', url: '/equipments' },
     { name: 'Our Team', url: '/ourteam' },
-  ].map((menu, index) => ({ index, ...menu }));
+  ];
 
   constructor(
     private authenticationService: AuthenticationService,

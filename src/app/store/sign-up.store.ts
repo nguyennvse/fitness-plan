@@ -14,6 +14,8 @@ type SignUpStateType = {
   address: string;
   phone: string;
   dateOfBirth: string;
+  isAuthenticated: boolean;
+  permission: string[];
 };
 
 const initialSignUpState: SignUpStateType = {
@@ -23,6 +25,8 @@ const initialSignUpState: SignUpStateType = {
   address: '',
   phone: '',
   dateOfBirth: '',
+  isAuthenticated: false,
+  permission: [],
 };
 
 export const SignUpStore = signalStore(
@@ -41,6 +45,9 @@ export const SignUpStore = signalStore(
         phone: signUpState.phone,
         dateOfBirth: signUpState.dateOfBirth,
       });
+    },
+    setIsAuthenticated(isAuthenticated: boolean, permission: string[]) {
+      patchState(store, { isAuthenticated, permission });
     },
   })),
 );

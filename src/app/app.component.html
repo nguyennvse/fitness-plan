@@ -7,7 +7,7 @@
   <div
     class="nav-menu w-4/5 flex items-center justify-center text-xl flex-1 gap-9"
   >
-    @for (item of navigationMenus; track $index) {
+    @for (item of navigationMenus; track item.name) {
       <a class="grow" [routerLink]="item.url" routerLinkActive="active">{{
         item.name
       }}</a>

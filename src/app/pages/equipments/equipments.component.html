@@ -39,6 +39,7 @@
     <div
       class="w-full h-full max-h-full equipment-container flex flex-wrap"
       appInfiniteScroll
+      (srollToBottom)="onSrollToBottom()"
     >
       @for (e of equipments(); track $index) {
         <app-equipment-card
