@@ -37,7 +37,7 @@
                   >
                 </div>
                 <p class="w-1/5">{{ cart.quantity * cart.price }}</p>
-                <div>
+                <div (click)="store.removeItem(cart)">
                   <mat-icon
                     class="size-6 hover:text-orange-500 cursor-pointer"
                     fontIcon="delete"

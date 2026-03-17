@@ -71,7 +71,7 @@ export const ShoppingCartState = signalStore(
         .find((i) => i.name === item.name && i.price === item.price);
 
       if (existingItem) {
-        const cloneListitme = store.listItem();
+        const cloneListitme = [...store.listItem()];
         const updatedList: ShoppingCartItem[] = cloneListitme.map((i) => {
           if (i.name === item.name && i.price === item.price) {
             i.quantity += 1;
@@ -82,6 +82,11 @@ export const ShoppingCartState = signalStore(
       } else {
         patchState(store, (state) => ({ listItem: [...state.listItem, item] }));
       }
+    },
+    removeItem(item: ShoppingCartItem): void {
+      const cloneListItem = [...store.listItem()];
+      const filterList = cloneListItem.filter((i) => i.name !== item.name);
+      patchState(store, (state) => ({ listItem: [...filterList] }));
     },
     loadByQuery: rxMethod<string>(
       pipe(

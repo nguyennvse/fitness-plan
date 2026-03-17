@@ -13,6 +13,7 @@ import {
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { Router } from '@angular/router';
+import { SignUpStore } from '../../store/sign-up.store';
 
 @Component({
   selector: 'app-login',
@@ -32,6 +33,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   private fb: FormBuilder = inject(FormBuilder);
+  store = inject(SignUpStore);
   constructor(private router: Router) {}
   loginForm = this.fb.group({
     id: [
