@@ -34,11 +34,19 @@
         ></mat-icon>
       </div>
     </a>
-    <mat-icon
-      class="size-6 hover:text-orange-500 cursor-pointer"
-      fontIcon="person"
-      (click)="goToLogin()"
-    ></mat-icon>
+    @if (authenticationStore.isSignedIn()) {
+      <mat-icon
+        class="size-6 hover:text-orange-500 cursor-pointer"
+        fontIcon="person"
+        (click)="goToLogin()"
+      ></mat-icon>
+    } @else {
+      <mat-icon
+        class="size-6 hover:text-orange-500 cursor-pointer"
+        fontIcon="login"
+        (click)="goToLogin()"
+      ></mat-icon>
+    }
   </div>
 </div>
 <router-outlet />

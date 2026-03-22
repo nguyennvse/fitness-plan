@@ -1,13 +1,19 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { Router, RouterModule, RouterOutlet } from '@angular/router';
+import {
+  Router,
+  RouterLink,
+  RouterModule,
+  RouterOutlet,
+} from '@angular/router';
 import { AuthenticationService } from './core/services/auth/authentication.service';
 import { FoodApiService } from './core/services/food/Food.service';
 import { ShoppingCartState } from './store/shopping-cart.store';
+import { AuthenticationStore } from './store/authentication.store';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatIconModule, RouterModule],
+  imports: [RouterOutlet, MatIconModule, RouterModule, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   providers: [AuthenticationService, FoodApiService],
@@ -20,9 +26,9 @@ export class AppComponent implements OnInit {
     { name: 'Foods', url: '/foods' },
     { name: 'Classes', url: '/classes' },
     { name: 'Equipments', url: '/equipments' },
-    { name: 'Our Team', url: '/ourteam' },
+    { name: 'Our Team', url: '/personal_info' },
   ];
-
+  authenticationStore = inject(AuthenticationStore);
   constructor(
     private authenticationService: AuthenticationService,
     private router: Router,
@@ -34,9 +40,11 @@ export class AppComponent implements OnInit {
   }
 
   goToLogin(): void {
-    this.router.navigate(
-      this.authenticationService.isAuthenticated() ? ['/home'] : ['/login'],
-    );
+    this.router.navigate(['/login']);
+  }
+
+  goToPersonal(): void {
+    this.router.navigate(['/personal_info']);
   }
 
   logoClick(): void {

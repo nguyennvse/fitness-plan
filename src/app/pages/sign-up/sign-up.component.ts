@@ -41,7 +41,7 @@ import { Router } from '@angular/router';
     FormGeneratorComponent,
     A11yModule,
   ],
-  providers: [FormBuilder, provideNativeDateAdapter(), Router],
+  providers: [provideNativeDateAdapter()],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SignUpComponent {

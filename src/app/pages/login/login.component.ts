@@ -14,12 +14,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
 import { Router } from '@angular/router';
 import { SignUpStore } from '../../store/sign-up.store';
+import { AuthenticationStore } from '../../store/authentication.store';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
-  providers: [FormBuilder, Router],
   imports: [
     MatInputModule,
     FormsModule,
@@ -33,7 +33,7 @@ import { SignUpStore } from '../../store/sign-up.store';
 })
 export class LoginComponent {
   private fb: FormBuilder = inject(FormBuilder);
-  store = inject(SignUpStore);
+  store = inject(AuthenticationStore);
   constructor(private router: Router) {}
   loginForm = this.fb.group({
     id: [
@@ -44,11 +44,12 @@ export class LoginComponent {
   });
 
   signIn() {
-    const { id, password } = this.loginForm.value;
-    if (id === 'admin@gmail.com' && password === '123') {
-      alert('signed in');
-    }
-    console.log('zzz loginform', this.loginForm);
+    // const { id, password } = this.loginForm.value;
+    // if (id === 'admin@gmail.com' && password === '123') {
+    //   alert('signed in');
+    // }
+    // this.store.setAuthentication(true);
+    this.router.navigate(['/personal_info']);
   }
 
   signUp(): void {

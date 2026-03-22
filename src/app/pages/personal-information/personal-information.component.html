@@ -1,1 +1,13 @@
-<p>personal-information works!</p>
+<div class="w-full flex">
+  <div class="w-1/5 h-full p-5 border-r border-r-gray-500 profile-menu">
+    @for (item of sideMenu; track item.title) {
+      <div class="text-center border-b border-gray-500 h-15 p-5">
+        <a [routerLink]="item.path">{{ item.title }}</a>
+        <!-- <a (click)="clickNavigate(item.path)">{{ item.title }}</a> -->
+      </div>
+    }
+  </div>
+  <div class="w-4/5">
+    <router-outlet></router-outlet>
+  </div>
+</div>
