@@ -15,6 +15,7 @@ import { ShoppingCartState } from '../../store/shopping-cart.store';
   templateUrl: './shopping-cart.component.html',
   styleUrl: './shopping-cart.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [ShoppingCartState],
 })
 export class ShoppingCartComponent {
   readonly store = inject(ShoppingCartState);

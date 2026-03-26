@@ -48,7 +48,7 @@ export class LoginComponent {
     // if (id === 'admin@gmail.com' && password === '123') {
     //   alert('signed in');
     // }
-    // this.store.setAuthentication(true);
+    this.store.setAuthentication(true);
     this.router.navigate(['/personal_info']);
   }
 

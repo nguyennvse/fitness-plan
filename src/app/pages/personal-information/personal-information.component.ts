@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  inject,
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import {
@@ -11,6 +12,7 @@ import {
   RouterModule,
   RouterOutlet,
 } from '@angular/router';
+import { AuthenticationStore } from '../../store/authentication.store';
 
 @Component({
   selector: 'app-personal-information',
@@ -21,6 +23,7 @@ import {
   // standalone: true,
 })
 export class PersonalInformationComponent {
+  authenStore = inject(AuthenticationStore);
   constructor(private router: Router) {}
   sideMenu = [
     {
@@ -31,6 +34,11 @@ export class PersonalInformationComponent {
     {
       title: 'Subscription',
       path: ['/personal_info/subscription'],
+      icon: '',
+    },
+    {
+      title: 'Book Personal Trainer',
+      path: ['/personal_info/book_pt'],
       icon: '',
     },
     {
@@ -49,9 +57,4 @@ export class PersonalInformationComponent {
       icon: '',
     },
   ];
-
-  clickNavigate(path: string) {
-    console.log('click', path);
-    this.router.navigate([path]);
-  }
 }

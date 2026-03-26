@@ -1,13 +1,26 @@
 <div class="w-full flex">
-  <div class="w-1/5 h-full p-5 border-r border-r-gray-500 profile-menu">
+  <div
+    class="w-1/5 min-h-full p-5 border-r border-r-gray-500 profile-menu text-center bg-blue-300"
+  >
+    <div class="mb-5">
+      <img
+        src="https://gymmantra.com/img/team/team-1.jpg"
+        class="rounded-full w-48 h-48 m-auto text-white"
+      />
+      <p class="text-xl">{{ authenStore.email() }}</p>
+      <p class="text-xl">{{ authenStore.fullName() }}</p>
+    </div>
+
     @for (item of sideMenu; track item.title) {
-      <div class="text-center border-b border-gray-500 h-15 p-5">
+      <div
+        class="text-center h-15 p-5 text-lg"
+        routerLinkActive="bg-orange-400 rounded-full text-white"
+      >
         <a [routerLink]="item.path">{{ item.title }}</a>
-        <!-- <a (click)="clickNavigate(item.path)">{{ item.title }}</a> -->
       </div>
     }
   </div>
-  <div class="w-4/5">
+  <div class="w-4/5 profile-menu overflow-auto">
     <router-outlet></router-outlet>
   </div>
 </div>

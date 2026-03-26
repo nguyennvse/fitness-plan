@@ -6,13 +6,11 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-component',
-  imports: [MatIconModule, ClassCardComponent, FooterComponent,RouterModule],
+  imports: [MatIconModule, ClassCardComponent, FooterComponent, RouterModule],
   templateUrl: './home-component.component.html',
   styleUrl: './home-component.component.css',
 })
 export class HomePageComponent {
-  
-
   classCard = [
     {
       image: 'https://themewagon.github.io/gymlife/img/classes/class-1.jpg',
@@ -42,7 +40,7 @@ export class HomePageComponent {
       title: 'Training',
       description: 'Boxing',
     },
-  ].map((card, index) => ({ index, ...card }));
+  ];
 
   plans = [
     {
@@ -81,7 +79,7 @@ export class HomePageComponent {
         'No time restriction',
       ],
     },
-  ].map((card, index) => ({ index, ...card }));;
+  ];
 
   constructor() {}
 }

@@ -1,20 +1,28 @@
-<div class="container">
-  <div class="w-full flex flex-nowrap gap-5 p-5">
-    <div class="w-2/5">
-      <img
-        src="https://gymmantra.com/img/team/team-1.jpg"
-        width="100%"
-        height="100%"
-      />
-    </div>
-    <div class="w-3/5 p-5">
-      <p>Email : {{ samplePerson.email }}</p>
-      <p>First Name : {{ samplePerson.firstName }}</p>
-      <p>Last Name : {{ samplePerson.lastName }}</p>
-      <p>Phone : {{ samplePerson.phone }}</p>
-      <p>Address : {{ samplePerson.address }}</p>
-      <p>Date of Birth : {{ samplePerson.dateOfBirth }}</p>
+<div class="container flex">
+  <div class="w-1/2 p-5">
+    <app-form-generator
+      [inputformGroup]="formGroup"
+      [formConfig]="formConfig"
+    ></app-form-generator>
+    <div class="w-full">
+      <button
+        class="rounded-full text-sm border border-orange-500 hover:bg-orange-500 transition-colors hover:text-white h-10 w-28"
+      >
+        Edit Profile
+      </button>
     </div>
   </div>
-  <div class="w-full"></div>
+  <div class="w-1/2 p-5">
+    <app-form-generator
+      [inputformGroup]="resetFromGroup"
+      [formConfig]="resetPwdConfig"
+    ></app-form-generator>
+    <div class="w-full">
+      <button
+        class="rounded-full text-sm border border-orange-500 hover:bg-orange-500 transition-colors hover:text-white h-10 w-48"
+      >
+        Change Password
+      </button>
+    </div>
+  </div>
 </div>

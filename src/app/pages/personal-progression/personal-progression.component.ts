@@ -5,8 +5,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   imports: [],
   templateUrl: './personal-progression.component.html',
   styleUrl: './personal-progression.component.css',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PersonalProgressionComponent {
-
-}
+export class PersonalProgressionComponent {}

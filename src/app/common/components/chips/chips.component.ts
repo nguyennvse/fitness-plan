@@ -41,7 +41,7 @@ export class ChipsComponent implements ControlValueAccessor {
     const originalList = [...this.chipList()];
     const textValue = this.textValue().toLowerCase();
     return originalList.filter((item) =>
-      item.toLowerCase().includes(textValue)
+      item.toLowerCase().includes(textValue),
     );
   });
 
@@ -63,15 +63,10 @@ export class ChipsComponent implements ControlValueAccessor {
 
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
-
-    // Add our fruit
     if (value) {
       this.selectedChips.update((chip) => [...chip, value]);
     }
-
-    // Clear the input value
     this.textValue.set('');
-    console.log('selectedChips', this.selectedChips());
     this.onChange(this.selectedChips());
     this.onTouched();
   }
