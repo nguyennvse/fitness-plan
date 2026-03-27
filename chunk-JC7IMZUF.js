@@ -1,1 +1,0 @@
-import{Qb as s,Rb as t,hc as r,ub as n}from"./chunk-QEXYEOKJ.js";var a=class o{static \u0275fac=function(e){return new(e||o)};static \u0275cmp=n({type:o,selectors:[["app-personal-progression"]],decls:2,vars:0,template:function(e,i){e&1&&(s(0,"p"),r(1,"personal-progression works!"),t())},encapsulation:2,changeDetection:0})};export{a as PersonalProgressionComponent};
