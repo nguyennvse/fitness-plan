@@ -17,6 +17,13 @@ https://nguyennvse.github.io/fitness-plan
 - SCSS
 - REST API
 
+## ⚡ Advanced Techniques
+- Angular Signal + Signal Store for state management
+- Infinite Scroll (IntersectionObserver)
+- RxJS for async data flow
+- Lazy loading modules
+- Optimized change detection
+
 ## 📦 Run project
 npm install
 ng serve
