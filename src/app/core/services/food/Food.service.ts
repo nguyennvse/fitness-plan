@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { FoodDtoModel, FoodViewModel } from '@foods/model/Food.model';
 import { map, Observable } from 'rxjs';
-import { FoodDtoModel, FoodViewModel } from '../../../model/Food.model';
 
 @Injectable({
   providedIn: 'root',
@@ -24,8 +24,8 @@ export class FoodApiService {
           meal: food.meal_type,
           tags: food.tags,
           image: food.image_url,
-        }))
-      )
+        })),
+      ),
     );
   }
 }

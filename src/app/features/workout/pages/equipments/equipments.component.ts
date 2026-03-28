@@ -1,8 +1,4 @@
 import { Component, inject, signal } from '@angular/core';
-import { EquipmentCardComponent } from '../equipment-card/equipment-card.component';
-import { EquipmentService } from '../../core/services/equipment/equipment.service.service';
-import { EquipmentDto } from '../../model/Equipment.model';
-import { ShoppingCartState } from '../../store/shopping-cart.store';
 import {
   FormBuilder,
   FormControl,
@@ -10,7 +6,7 @@ import {
   ɵInternalFormsSharedModule,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { FormConfigType } from '../../model/FormConfig.model';
+import { FormConfigType } from '../../../../model/FormConfig.model';
 import {
   debounceTime,
   distinctUntilChanged,
@@ -19,20 +15,24 @@ import {
   takeUntil,
 } from 'rxjs';
 import { MatIconModule } from '@angular/material/icon';
-import { CheckboxComponent } from '../../common/components/checkbox/checkbox.component';
-import { SliderComponent } from '../../common/components/slider/slider.component';
-import { InfiniteScrollDirective } from '../../common/directive/infinite-scroll.directive';
+import { ShoppingCartState } from '@cart/store/shopping-cart.store';
+import { EquipmentService } from '@core/services/equipment/equipment.service.service';
+import { CheckboxComponent } from '@shared/components/checkbox/checkbox.component';
+import { SliderComponent } from '@shared/components/slider/slider.component';
+import { InfiniteScrollDirective } from '@shared/directive/infinite-scroll.directive';
+import { EquipmentDto } from 'src/app/model/Equipment.model';
+import { EquipmentCardComponent } from '@workout/components/equipment-card/equipment-card.component';
 
 @Component({
   selector: 'app-equipments',
   imports: [
-    EquipmentCardComponent,
     ɵInternalFormsSharedModule,
     ReactiveFormsModule,
     MatIconModule,
     SliderComponent,
     CheckboxComponent,
-    InfiniteScrollDirective,
+    InfiniteScrollDirective, 
+    EquipmentCardComponent
   ],
   templateUrl: './equipments.component.html',
   styleUrl: './equipments.component.css',

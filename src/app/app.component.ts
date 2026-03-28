@@ -1,5 +1,4 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
 import {
   Router,
   RouterLink,
@@ -8,8 +7,9 @@ import {
 } from '@angular/router';
 import { AuthenticationService } from './core/services/auth/authentication.service';
 import { FoodApiService } from './core/services/food/Food.service';
-import { ShoppingCartState } from './store/shopping-cart.store';
-import { AuthenticationStore } from './store/authentication.store';
+import { ShoppingCartState } from './features/cart/store/shopping-cart.store';
+import { AuthenticationStore } from './features/authentication/store/authentication.store';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-root',

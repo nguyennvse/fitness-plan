@@ -19,11 +19,11 @@ import {
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Title } from '@angular/platform-browser';
-import { FormGeneratorComponent } from '../../common/components/form-generator/form-generator.component';
 import { A11yModule } from '@angular/cdk/a11y';
-import { FormConfigType } from '../../model/FormConfig.model';
-import { SignUpStore } from '../../store/sign-up.store';
 import { Router } from '@angular/router';
+import { FormGeneratorComponent } from '../../../../shared/components/form-generator/form-generator.component';
+import { SignUpStore } from '../../store/sign-up.store';
+import { FormConfigType } from '../../../../model/FormConfig.model';
 
 @Component({
   selector: 'app-sign-up',

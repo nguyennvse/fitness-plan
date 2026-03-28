@@ -1,40 +1,46 @@
 import { Routes } from '@angular/router';
 import { HomePageComponent } from './core/layouts/home-component/home-component.component';
-import { PersonalSubscriptionComponent } from './pages/personal-subscription/personal-subscription.component';
+import { PersonalSubscriptionComponent } from './features/user/pages/personal-subscription/personal-subscription.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomePageComponent },
+  // {
+  //   path: 'foods',
+  //   loadComponent: () =>
+  //     import('./features/foods/pages/foods/foods.component').then(
+  //       (m) => m.FoodsComponent,
+  //     ),
+  // },
   {
     path: 'foods',
-    loadComponent: () =>
-      import('./pages/foods/foods.component').then((m) => m.FoodsComponent),
+    loadChildren: () => import('@foods/foods.route').then((m) => m.FoodsRoute),
   },
   {
     path: 'classes',
     loadComponent: () =>
-      import('./pages/classes/classes.component').then(
+      import('./core/layouts/classes/classes.component').then(
         (m) => m.ClassesComponent,
       ),
   },
   {
     path: 'equipments',
     loadComponent: () =>
-      import('./pages/equipments/equipments.component').then(
+      import('./features/workout/pages/equipments/equipments.component').then(
         (m) => m.EquipmentsComponent,
       ),
   },
   {
     path: 'shopping_cart',
     loadComponent: () =>
-      import('./pages/shopping-cart/shopping-cart.component').then(
+      import('./features/cart/pages/shopping-cart/shopping-cart.component').then(
         (m) => m.ShoppingCartComponent,
       ),
   },
   {
     path: 'sign_up',
     loadComponent: () =>
-      import('./pages/sign-up/sign-up.component').then(
+      import('./features/authentication/pages/sign-up/sign-up.component').then(
         (m) => m.SignUpComponent,
       ),
   },
@@ -48,19 +54,21 @@ export const routes: Routes = [
   {
     path: 'login',
     loadComponent: () =>
-      import('./pages/login/login.component').then((m) => m.LoginComponent),
+      import('./features/authentication/pages/login/login.component').then(
+        (m) => m.LoginComponent,
+      ),
   },
   {
     path: 'email_verify',
     loadComponent: () =>
-      import('./pages/email-verify/email-verify.component').then(
+      import('./features/authentication/pages/email-verify/email-verify.component').then(
         (m) => m.EmailVerifyComponent,
       ),
   },
   {
     path: 'personal_info',
     loadComponent: () =>
-      import('./pages/personal-information/personal-information.component').then(
+      import('./features/user/pages/personal-information/personal-information.component').then(
         (m) => m.PersonalInformationComponent,
       ),
     children: [
@@ -72,7 +80,7 @@ export const routes: Routes = [
       {
         path: 'profile',
         loadComponent: () =>
-          import('./pages/personal-profile/personal-profile.component').then(
+          import('./features/user/pages/personal-profile/personal-profile.component').then(
             (m) => m.PersonalProfileComponent,
           ),
       },
@@ -87,21 +95,21 @@ export const routes: Routes = [
       {
         path: 'progression',
         loadComponent: () =>
-          import('./pages/personal-progression/personal-progression.component').then(
+          import('./features/user/pages/personal-progression/personal-progression.component').then(
             (m) => m.PersonalProgressionComponent,
           ),
       },
       {
         path: 'history',
         loadComponent: () =>
-          import('./pages/personal-history/personal-history.component').then(
+          import('./features/user/pages/personal-history/personal-history.component').then(
             (m) => m.PersonalHistoryComponent,
           ),
       },
       {
         path: 'setting',
         loadComponent: () =>
-          import('./pages/personal-setting/personal-setting.component').then(
+          import('./features/user/pages/personal-setting/personal-setting.component').then(
             (m) => m.PersonalSettingComponent,
           ),
       },

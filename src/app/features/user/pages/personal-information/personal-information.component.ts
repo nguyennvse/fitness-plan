@@ -12,7 +12,7 @@ import {
   RouterModule,
   RouterOutlet,
 } from '@angular/router';
-import { AuthenticationStore } from '../../store/authentication.store';
+import { AuthenticationStore } from '../../../authentication/store/authentication.store';
 
 @Component({
   selector: 'app-personal-information',

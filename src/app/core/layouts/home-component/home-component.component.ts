@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { ClassCardComponent } from '../../../pages/class-card/class-card.component';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterModule } from '@angular/router';
+import { ClassCardComponent } from '../class-card/class-card.component';
 
 @Component({
   selector: 'app-home-component',

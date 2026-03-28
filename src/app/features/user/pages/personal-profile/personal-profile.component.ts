@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { FormConfigType } from '../../model/FormConfig.model';
-import { FormGeneratorComponent } from '../../common/components/form-generator/form-generator.component';
-import { AuthenticationStore } from '../../store/authentication.store';
+import { FormConfigType } from '../../../../model/FormConfig.model';
+import { FormGeneratorComponent } from '../../../../shared/components/form-generator/form-generator.component';
+import { AuthenticationStore } from '../../../authentication/store/authentication.store';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({

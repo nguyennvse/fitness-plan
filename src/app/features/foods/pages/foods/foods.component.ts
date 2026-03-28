@@ -1,9 +1,5 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { FoodCardComponent } from '../food-card/food-card.component';
-import { FoodApiService } from '../../core/services/food/Food.service';
-import { FoodDtoModel, FoodViewModel } from '../../model/Food.model';
 import { MatIconModule } from '@angular/material/icon';
-import { SliderComponent } from '../../common/components/slider/slider.component';
 import {
   FormBuilder,
   FormGroup,
@@ -11,10 +7,14 @@ import {
   ReactiveFormsModule,
   FormControl,
 } from '@angular/forms';
-import { FormConfigType } from '../../model/FormConfig.model';
-import { CheckboxComponent } from '../../common/components/checkbox/checkbox.component';
 import { debounceTime, distinctUntilChanged, Subject, takeUntil } from 'rxjs';
-import { InfiniteScrollDirective } from '../../common/directive/infinite-scroll.directive';
+import { CheckboxComponent } from '@shared/components/checkbox/checkbox.component';
+import { InfiniteScrollDirective } from '@shared/directive/infinite-scroll.directive';
+import { FormConfigType } from 'src/app/model/FormConfig.model';
+import { FoodCardComponent } from '@foods/components/food-card/food-card.component';
+import { SliderComponent } from '@shared/components/slider/slider.component';
+import { FoodApiService } from '@core/services/food/Food.service';
+import { FoodViewModel } from '@foods/model/Food.model';
 @Component({
   selector: 'app-foods',
   imports: [

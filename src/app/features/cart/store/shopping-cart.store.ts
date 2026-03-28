@@ -1,5 +1,5 @@
 import { computed } from '@angular/core';
-import { ShoppingCartItem } from '../model/shopping-cart.model';
+import { ShoppingCartItem } from '../../../model/shopping-cart.model';
 import {
   patchState,
   signalStore,
