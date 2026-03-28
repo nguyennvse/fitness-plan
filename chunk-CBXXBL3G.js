@@ -1,1 +1,0 @@
-import{Ub as n,Vb as s,qc as a,wb as o}from"./chunk-IGHPYK4P.js";var r=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-personal-history"]],decls:2,vars:0,template:function(e,p){e&1&&(n(0,"p"),a(1,"personal-history works!"),s())},encapsulation:2,changeDetection:0})};export{r as PersonalHistoryComponent};
