@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var t=[{path:"",loadComponent:()=>import("./chunk-46NOZA72.js").then(o=>o.EquipmentsComponent)},{path:"exercise",loadComponent:()=>import("./chunk-FJ3BMG5C.js").then(o=>o.ExercisesComponent)}];export{t as WorkoutRoute};

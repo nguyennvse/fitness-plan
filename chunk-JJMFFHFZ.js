@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var t=[{path:"",loadComponent:()=>import("./chunk-RDOOU2DH.js").then(o=>o.LoginComponent)},{path:"sign-up",loadComponent:()=>import("./chunk-E4Y32Q3T.js").then(o=>o.SignUpComponent)},{path:"sign-up",loadComponent:()=>import("./chunk-E4Y32Q3T.js").then(o=>o.SignUpComponent)}];export{t as AuthenticationRoute};

@@ -1,0 +1,1 @@
+import{Nb as n,Ob as o,jc as i,pb as s}from"./chunk-MDO4HC6X.js";import"./chunk-GAL4ENT6.js";var r=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=s({type:t,selectors:[["app-exercises"]],decls:2,vars:0,template:function(e,c){e&1&&(n(0,"p"),i(1,"exercises works!"),o())},encapsulation:2})};export{r as ExercisesComponent};
