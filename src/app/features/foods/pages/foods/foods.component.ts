@@ -29,7 +29,7 @@ import { FoodViewModel } from '@foods/model/Food.model';
   templateUrl: './foods.component.html',
   styleUrl: './foods.component.css',
   providers: [FoodApiService],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FoodsComponent {
   constructor(
@@ -92,6 +92,7 @@ export class FoodsComponent {
 
     this.foodApiService.getMockFood().subscribe((foodList) => {
       this.originalFood = foodList;
+      console.log('foodList', foodList);
       this.foods.set(this.originalFood.slice(0, 9));
     });
 

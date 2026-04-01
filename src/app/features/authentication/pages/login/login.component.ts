@@ -49,11 +49,11 @@ export class LoginComponent {
     //   alert('signed in');
     // }
     this.store.setAuthentication(true);
-    this.router.navigate(['/personal_info']);
+    this.router.navigate(['/user/profile']);
   }
 
   signUp(): void {
-    this.router.navigate(['/sign_up']);
+    this.router.navigate(['/authentication/sign-up']);
   }
 
   forgetPassword(): void {

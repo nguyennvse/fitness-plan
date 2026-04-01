@@ -5,46 +5,27 @@ import {
   RouterModule,
   RouterOutlet,
 } from '@angular/router';
-import { AuthenticationService } from './core/services/auth/authentication.service';
-import { FoodApiService } from './core/services/food/Food.service';
 import { ShoppingCartState } from './features/cart/store/shopping-cart.store';
-import { AuthenticationStore } from './features/authentication/store/authentication.store';
 import { MatIconModule } from '@angular/material/icon';
+import { NavBarComponent } from '@core/layouts/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, MatIconModule, RouterModule, RouterLink],
+  imports: [RouterOutlet, MatIconModule, RouterModule, NavBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  providers: [AuthenticationService, FoodApiService],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'your-fitness-plan';
   readonly store = inject(ShoppingCartState);
-  navigationMenus = [
-    { name: 'Home', url: '/home' },
-    { name: 'Foods', url: '/foods' },
-    { name: 'Classes', url: '/classes' },
-    { name: 'Equipments', url: '/equipments' },
-    { name: 'Our Team', url: '/personal_info' },
-  ];
-  authenticationStore = inject(AuthenticationStore);
-  constructor(
-    private authenticationService: AuthenticationService,
-    private router: Router,
-    private mockapiService: FoodApiService,
-  ) {}
-
-  ngOnInit(): void {
-    this.mockapiService.getMockFood().subscribe(console.log);
-  }
+  constructor(private router: Router) {}
 
   goToLogin(): void {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/authentication']);
   }
 
   goToPersonal(): void {
-    this.router.navigate(['/personal_info']);
+    this.router.navigate(['/user/profile']);
   }
 
   logoClick(): void {

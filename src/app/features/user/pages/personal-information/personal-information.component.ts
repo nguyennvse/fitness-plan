@@ -28,32 +28,32 @@ export class PersonalInformationComponent {
   sideMenu = [
     {
       title: 'Profile',
-      path: ['/personal_info/profile'],
+      path: ['/user/profile'],
       icon: '',
     },
     {
       title: 'Subscription',
-      path: ['/personal_info/subscription'],
+      path: ['/user/subscription'],
       icon: '',
     },
     {
       title: 'Book Personal Trainer',
-      path: ['/personal_info/book_pt'],
+      path: ['/user/book_pt'],
       icon: '',
     },
     {
       title: 'Progression',
-      path: ['/personal_info/progression'],
+      path: ['/user/progression'],
       icon: '',
     },
     {
       title: 'History',
-      path: ['/personal_info/history'],
+      path: ['/user/history'],
       icon: '',
     },
     {
       title: 'Setting',
-      path: ['/personal_info/setting'],
+      path: ['/user/setting'],
       icon: '',
     },
   ];

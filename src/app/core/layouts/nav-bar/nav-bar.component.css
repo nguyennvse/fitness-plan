@@ -1,0 +1,50 @@
+.menu-icon {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  height: 76px;
+}
+
+.nav-menu {
+  z-index: 10;
+  display: flex;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 770px) {
+  .nav-menu {
+    display: none;
+    font-size: 14px;
+    position: fixed;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    max-width: 400px;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+
+  .menu-item {
+    border-bottom: 2px solid lightgray;
+    font-weight: bold;
+    line-height: 50px;
+    display: block;
+  }
+
+  .show {
+    display: block !important;
+  }
+}
